@@ -3,6 +3,10 @@
 function FormularioRegistro(){
     const guardarFormulario = (datosFormulario) => {
         console.log(datosFormulario);
+        
+        google.script.run.withSuccessHandler(resp =>{
+            console.log(resp.titulo);
+        }).guardarUsuario(datosFormulario)
     }
     return(
         <div className="px-20">
